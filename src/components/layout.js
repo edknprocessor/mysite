@@ -8,9 +8,10 @@
 import * as React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
+import tw, { styled } from "twin.macro"
 
 import Header from "./header"
-import "./layout.css"
+// import "./layout.css"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -27,20 +28,14 @@ const Layout = ({ children }) => {
     <>
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
       <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
-        }}
+        css={[tw`w-full flex flex-col items-center`]}
       >
-        <main>{children}</main>
-        <footer
-          style={{
-            marginTop: `2rem`,
-          }}
+        <main
+          css={[tw`w-full mt-8 max-w-screen-md`]}
         >
-          © {new Date().getFullYear()}, Built with
-          {` `}
+          {children}
+        </main>
+        <footer css={[tw`mt-8`]}>
           <a href="https://www.gatsbyjs.com">Gatsby</a>
         </footer>
       </div>

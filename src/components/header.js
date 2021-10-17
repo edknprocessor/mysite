@@ -1,32 +1,40 @@
 import * as React from "react"
 import PropTypes from "prop-types"
+import tw, { styled } from "twin.macro"
 import { Link } from "gatsby"
+
+const MenuItem = (props) => (
+  <div css={[ tw`mx-2` ]}>
+    <Link to={props.url} css={[
+      tw`px-4 py-2 text-red-600 border-b hover:border-black`
+    ]}>{props.title}</Link>
+  </div>
+)
 
 const Header = ({ siteTitle }) => (
   <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
+    css={[
+      tw`w-full	bg-gray-100 p-4`
+    ]}
   >
     <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
+      css={[
+        tw`flex justify-around`
+      ]}
     >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
+      <h1>
+        <Link to="/">
           {siteTitle}
         </Link>
       </h1>
+      <div
+        css={[
+          tw`flex`
+        ]}
+      >
+        <MenuItem url="/" title="works" />
+        <MenuItem url="/contact" title="contact" />
+      </div>
     </div>
   </header>
 )
