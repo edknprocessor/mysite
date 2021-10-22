@@ -31,12 +31,12 @@ const Layout = ({ children }) => {
         css={[tw`w-full flex flex-col items-center`]}
       >
         <main
-          css={[tw`w-full mt-8 max-w-screen-md`]}
+          css={[tw`w-full px-4 pt-24 pb-16 max-w-screen-md`]}
         >
           {children}
         </main>
-        <footer css={[tw`mt-8`]}>
-          <a href="https://www.gatsbyjs.com">Gatsby</a>
+        <footer css={[tw`mt-8 py-8`]}>
+          © 2021 edknprocessor
         </footer>
       </div>
     </>

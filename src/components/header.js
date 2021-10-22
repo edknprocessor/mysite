@@ -14,7 +14,7 @@ const MenuItem = (props) => (
 const Header = ({ siteTitle }) => (
   <header
     css={[
-      tw`w-full	bg-gray-100 p-4`
+      tw`w-full	fixed z-50 bg-gray-100 p-4`
     ]}
   >
     <div
@@ -32,7 +32,7 @@ const Header = ({ siteTitle }) => (
           tw`flex`
         ]}
       >
-        <MenuItem url="/" title="works" />
+        <MenuItem url="/" title="home" />
         <MenuItem url="/contact" title="contact" />
       </div>
     </div>
