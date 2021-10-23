@@ -14,7 +14,7 @@ const MenuItem = (props) => (
 const Header = ({ siteTitle }) => (
   <header
     css={[
-      tw`w-full	fixed z-50 bg-gray-100 p-4`
+      tw`w-full	fixed z-50 top-0 left-0 p-4 bg-white bg-opacity-70 shadow-md`
     ]}
   >
     <div

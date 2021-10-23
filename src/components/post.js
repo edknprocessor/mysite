@@ -5,7 +5,7 @@ const Post = ( props ) => (
   <div css={[tw`w-full`]}
   >
     <div
-      className="prose"
+      className="p-post"
       dangerouslySetInnerHTML={{ __html: props.html }}
     />
   </div>

@@ -3,5 +3,22 @@
 @tailwind utilities;
 
 a {
-  color: #DC2626;
+  @apply text-red-600 hover:text-gray-500;
+}
+
+.p-post h2 {
+  @apply my-4 font-bold text-2xl;
+}
+.p-post h3 {
+  @apply my-2 font-bold text-xl;
+}
+.p-post ul {
+  @apply my-4;
+}
+.p-post ul > li {
+  @apply mt-2;
+}
+.p-post ul > li::before {
+  content: "-";
+  @apply inline-block text-gray-400 mr-4;
 }
