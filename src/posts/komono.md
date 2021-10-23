@@ -1,7 +1,9 @@
 ---
-title: "小物"
+title: "小物類"
 featuredImage: "../images/komono.png"
 date: "2021-08"
 ---
 
-ここに説明文
+描き起こし
+
+下書き・線画:各30分~1時間

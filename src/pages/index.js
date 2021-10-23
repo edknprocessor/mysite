@@ -5,6 +5,7 @@ import Layout from "../components/layout"
 import { graphql } from 'gatsby'
 import Seo from "../components/seo"
 import Card from "../components/card"
+import Post from "../components/post"
 import Img from "gatsby-image"
 
 const IndexPage = ({ data }) => {
@@ -22,7 +23,9 @@ const IndexPage = ({ data }) => {
                 fluid={node.frontmatter.featuredImage.childImageSharp.fluid}
                 css={[tw`my-8`]}
               />
-              <div dangerouslySetInnerHTML={{ __html: node.html }} />
+              <Post
+                html={node.html}
+              />
             </Card>
           </div>
         ))}

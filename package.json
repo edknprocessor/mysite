@@ -5,6 +5,7 @@
   "version": "0.1.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
+    "@tailwindcss/typography": "^0.4.1",
     "autoprefixer": "^10.3.7",
     "gatsby": "^3.14.2",
     "gatsby-image": "^3.11.0",
@@ -25,6 +26,7 @@
     "tailwindcss": "^2.2.17"
   },
   "devDependencies": {
+    "@emotion/core": "^11.0.0",
     "@emotion/react": "^11.5.0",
     "@emotion/styled": "^11.3.0",
     "gatsby-plugin-emotion": "^6.14.0",
@@ -50,5 +52,13 @@
   },
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby/issues"
+  },
+  "babelMacros": {
+    "twin": {
+      "config": "./tailwind.config.js",
+      "preset": "emotion",
+      "hasSuggestions": true,
+      "debug": false
+    }
   }
 }
