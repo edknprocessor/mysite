@@ -1,5 +1,5 @@
 ---
-title: "シスターロサリア"
+title: "ロサリア"
 featuredImage: "../images/rose2.png"
 date: "2021-10"
 ---

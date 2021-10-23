@@ -1,5 +1,4 @@
 import * as React from "react"
-import { Link } from "gatsby"
 import tw, { styled } from "twin.macro"
 import Layout from "../components/layout"
 import { graphql } from 'gatsby'
@@ -41,7 +40,9 @@ export const query = graphql`
         title
       }
     },
-    allMarkdownRemark(sort: {order: DESC, fields: frontmatter___date}) {
+    allMarkdownRemark(
+      sort: {order: [DESC, ASC], fields: [frontmatter___date, frontmatter___title]}
+    ) {
       nodes {
         frontmatter {
           date
