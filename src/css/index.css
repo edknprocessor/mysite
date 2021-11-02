@@ -22,3 +22,11 @@ a {
   content: "-";
   @apply inline-block text-gray-400 mr-4;
 }
+
+dt {
+  @apply mt-2;
+}
+
+dd {
+  @apply ml-4;
+}
