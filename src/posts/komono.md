@@ -1,6 +1,7 @@
 ---
 title: "小物類"
 featuredImage: "../images/komono.png"
+tags: ["小物"]
 date: "2021-08"
 ---
 

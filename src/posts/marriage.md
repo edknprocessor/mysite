@@ -1,6 +1,7 @@
 ---
 title: "花嫁"
 featuredImage: "../images/marriage.jpeg"
+tags: ["カラー", "キャラクター", "背景"]
 date: "2021-07"
 ---
 

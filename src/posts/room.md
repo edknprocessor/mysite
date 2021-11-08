@@ -1,6 +1,7 @@
 ---
 title: "マンションの部屋"
 featuredImage: "../images/room.png"
+tags: ["背景"]
 date: "2021-09"
 ---
 

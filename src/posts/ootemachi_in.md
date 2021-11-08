@@ -1,6 +1,7 @@
 ---
 title: "大手町駅構内"
 featuredImage: "../images/ootemachi_in.png"
+tags: ["背景"]
 date: "2021-10-26"
 ---
 

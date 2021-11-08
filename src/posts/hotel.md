@@ -1,6 +1,7 @@
 ---
 title: "ホテルの客室"
 featuredImage: "../images/hotel.png"
+tags: ["背景"]
 date: "2021-08"
 ---
 

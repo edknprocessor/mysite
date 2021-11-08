@@ -1,6 +1,7 @@
 ---
 title: "ロサリア"
 featuredImage: "../images/rose2.png"
+tags: ["カラー", "キャラクター", "背景"]
 date: "2021-10"
 ---
 

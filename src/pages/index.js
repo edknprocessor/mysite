@@ -29,6 +29,7 @@ const IndexPage = ({ data }) => {
                 date={node.frontmatter.date}
                 img={node.frontmatter.featuredImage.childImageSharp.fluid}
                 html={node.html}
+                tags={node.frontmatter.tags}
               />
             </div>
           ))}
@@ -48,9 +49,14 @@ export const query = graphql`
     allMarkdownRemark(
       sort: {order: [DESC, ASC], fields: [frontmatter___date, frontmatter___title]}
     ) {
+        group(field: frontmatter___tags) {
+        tag: fieldValue
+        totalCount
+      }
       nodes {
         frontmatter {
           date
+          tags
           featuredImage {
             childImageSharp {
               fluid(maxWidth: 800) {

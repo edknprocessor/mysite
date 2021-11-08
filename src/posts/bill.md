@@ -1,6 +1,7 @@
 ---
 title: "ビルとモノレール"
 featuredImage: "../images/bill.png"
+tags: ["背景"]
 date: "2021-08"
 ---
 

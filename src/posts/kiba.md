@@ -1,6 +1,7 @@
 ---
 title: "マンション"
 featuredImage: "../images/kiba.png"
+tags: ["背景"]
 date: "2021-10"
 ---
 

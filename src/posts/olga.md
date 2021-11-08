@@ -1,6 +1,7 @@
 ---
 title: "パジャマオルガ"
 featuredImage: "../images/olga.jpeg"
+tags: ["カラー", "キャラクター", "背景"]
 date: "2021-06"
 ---
 

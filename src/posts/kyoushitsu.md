@@ -1,6 +1,7 @@
 ---
 title: "教室"
 featuredImage: "../images/kyoushitsu.png"
+tags: ["背景"]
 date: "2021-10"
 ---
 
