@@ -1,25 +1,15 @@
 import * as React from "react"
 import tw, { styled } from "twin.macro"
 import Layout from "../components/layout"
-import { StaticImage } from "gatsby-plugin-image"
 import { graphql } from 'gatsby'
 import Seo from "../components/seo"
 import Card from "../components/card"
+import Tag from "../components/tag"
 
 const IndexPage = ({ data }) => {
   return (
     <>
       <Seo title="Home" />
-      <div css={[tw`mt-14 relative`]}>
-        <StaticImage
-          src="../images/header.png"
-          quality={95}
-          alt={data.site.siteMetadata.author}
-        />
-        <h1 css={[tw`absolute top-0 left-0 w-full h-full flex justify-center items-center text-white text-center text-4xl font-bold tracking-tighter`]}>
-          edknprocessor
-        </h1>
-      </div>
       <Layout>
         <div>
           <p css={[tw`text-center text-3xl`]}>作品リスト</p>
