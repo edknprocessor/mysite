@@ -30,7 +30,7 @@ const Layout = ({ children }) => {
         <StaticImage
           src="../images/header.png"
           quality={95}
-          alt={data.site.siteMetadata.author}
+          alt={data.site.siteMetadata.title}
         />
         <h1 css={[tw`absolute top-0 left-0 w-full h-full flex justify-center items-center text-white text-center text-4xl font-bold tracking-tighter`]}>
           edknprocessor

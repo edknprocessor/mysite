@@ -4,7 +4,8 @@ import Layout from "../components/layout"
 import { graphql } from 'gatsby'
 import Seo from "../components/seo"
 import Card from "../components/card"
-import Tag from "../components/tag"
+import AllTags from "../components/allTags"
+
 
 const IndexPage = ({ data }) => {
   return (
@@ -13,6 +14,9 @@ const IndexPage = ({ data }) => {
       <Layout>
         <div>
           <p css={[tw`text-center text-3xl`]}>作品リスト</p>
+          <div css={[tw`mt-8`]}>
+            <AllTags />
+          </div>
           {data.allMarkdownRemark.nodes.map( node => (
             <div css={[tw`mt-8`]} key={node.frontmatter.title}>
               <Card title={node.frontmatter.title}
@@ -39,10 +43,6 @@ export const query = graphql`
     allMarkdownRemark(
       sort: {order: [DESC, ASC], fields: [frontmatter___date, frontmatter___title]}
     ) {
-        group(field: frontmatter___tags) {
-        tag: fieldValue
-        totalCount
-      }
       nodes {
         frontmatter {
           date
