@@ -17,7 +17,6 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
 exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions
 
-  // const blogPostTemplate = path.resolve("src/templates/blog.js")
   const tagTemplate = path.resolve("src/templates/tags.js")
 
   const result = await graphql(`
@@ -49,16 +48,6 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     reporter.panicOnBuild(`Error while running GraphQL query.`)
     return
   }
-
-  // const posts = result.data.postsRemark.edges
-  //
-  // // Create post detail pages
-  // posts.forEach(({ node }) => {
-  //   createPage({
-  //     path: node.fields.slug,
-  //     component: blogPostTemplate,
-  //   })
-  // })
 
   // Extract tag data from query
   const tags = result.data.tagsGroup.group
