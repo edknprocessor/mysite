@@ -1,7 +1,7 @@
 ---
 title: "屋外の階段"
 featuredImage: "../images/kaidan.png"
-tags: ["背景"]
+tags: ["背景", "モノクロ"]
 date: "2021-10"
 ---
 

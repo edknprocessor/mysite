@@ -1,7 +1,7 @@
 ---
 title: "マンションの廊下"
 featuredImage: "../images/mansion.png"
-tags: ["背景"]
+tags: ["背景", "モノクロ"]
 date: "2021-10"
 ---
 

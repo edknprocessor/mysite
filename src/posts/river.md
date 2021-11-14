@@ -1,7 +1,7 @@
 ---
 title: "川と木々"
 featuredImage: "../images/river.png"
-tags: ["背景"]
+tags: ["背景", "モノクロ"]
 date: "2021-08"
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "東京ドームシティ"
 featuredImage: "../images/tokyodomecity.png"
-tags: ["背景"]
+tags: ["背景", "モノクロ"]
 date: "2021-10-29"
 ---
 
