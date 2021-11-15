@@ -2,7 +2,7 @@
 title: "煙緋ちゃん"
 featuredImage: "../images/yanfei.jpg"
 tags: ["カラー", "キャラクター", "背景"]
-date: "2021-11-4"
+date: "2021-11-04"
 ---
 
 ゲーム画面の3Dを元に描き起こし
