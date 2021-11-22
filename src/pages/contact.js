@@ -20,7 +20,7 @@ const ContactPage = ({ data }) => (
         {data.site.siteMetadata?.author || `Author`}
       </h1>
       <div css={[tw`mt-4`]}>
-        <p>edknprocessorは、えんがわのポートフォリオサイトです。漫画アシスタント(背景作画、トーン仕上げ等)のお仕事を募集中です。</p>
+        <p>edknprocessorは、えんがわのポートフォリオサイトです。漫画アシスタント(背景作画、トーン仕上げ等)、イラストのお仕事を募集中です。</p>
         <div css={[tw`flex items-center justify-center`]}>
           連絡先:
           <StaticImage
@@ -38,7 +38,7 @@ const ContactPage = ({ data }) => (
         <dt>2019年~2021年</dt>
         <dd>民間企業にてITエンジニアとして従事</dd>
         <dt>2017年~2019年</dt>
-        <dd>『花鈴のマウンド』(星桜高校漫画研究会)ネーム、背景作画、カラーイラスト彩色</dd>
+        <dd>少女向け野球漫画のネーム、背景作画、カラーイラスト彩色</dd>
         <dt>2017年</dt>
         <dd>東京農工大学を卒業</dd>
         <dt>2016年</dt>
