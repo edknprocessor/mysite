@@ -1,5 +1,5 @@
 import * as React from "react"
-import tw, { styled } from "twin.macro"
+import tw from "twin.macro"
 import Post from "../components/post"
 import Img from "gatsby-image"
 import TagList from "../components/tagList"
@@ -8,7 +8,7 @@ const Card = (props) => {
   const tagList = props.tags.map(tag => {
     return {fieldValue: tag}
   })
-  
+
   return(
     <div css={[
       tw`w-full p-8 bg-white shadow-xl rounded-lg`

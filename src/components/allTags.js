@@ -1,7 +1,6 @@
 import * as React from "react"
 import PropTypes from "prop-types"
-import { useStaticQuery, graphql, Link } from "gatsby"
-import tw, { styled } from "twin.macro"
+import { useStaticQuery, graphql } from "gatsby"
 import TagList from "./tagList.js"
 
 

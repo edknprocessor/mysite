@@ -1,3 +1,4 @@
+const { paginate } = require(`gatsby-awesome-pagination`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
 const path = require("path")
 const _ = require("lodash")
@@ -21,18 +22,16 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 
   const result = await graphql(`
     {
-      postsRemark: allMarkdownRemark(
+      allMarkdownRemark(
         sort: { order: DESC, fields: [frontmatter___date] }
         limit: 2000
       ) {
-        edges {
-          node {
-            fields {
-              slug
-            }
-            frontmatter {
-              tags
-            }
+        nodes {
+          fields {
+            slug
+          }
+          frontmatter {
+            tags
           }
         }
       }
@@ -48,6 +47,16 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     reporter.panicOnBuild(`Error while running GraphQL query.`)
     return
   }
+
+  const posts = result.data.allMarkdownRemark.nodes
+
+  paginate({
+    createPage, // The Gatsby `createPage` function
+    items: posts, // An array of objects
+    itemsPerPage: 10, // How many items you want per page
+    pathPrefix: ({ pageNumber }) => (pageNumber === 0 ? "/" : "/page"),
+    component: path.resolve('src/templates/index.js')
+  })
 
   // Extract tag data from query
   const tags = result.data.tagsGroup.group

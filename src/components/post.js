@@ -1,5 +1,5 @@
 import * as React from "react"
-import tw, { styled } from "twin.macro"
+import tw from "twin.macro"
 
 const Post = ( props ) => (
   <div css={[tw`w-full`]}

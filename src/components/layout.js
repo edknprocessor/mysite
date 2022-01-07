@@ -8,7 +8,7 @@
 import * as React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
-import tw, { styled } from "twin.macro"
+import tw from "twin.macro"
 import { StaticImage } from "gatsby-plugin-image"
 import Header from "./header"
 

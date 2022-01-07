@@ -1,5 +1,5 @@
 import * as React from "react"
-import tw, { styled } from "twin.macro"
+import tw from "twin.macro"
 import { Link } from "gatsby"
 
 import kebabCase from "lodash/kebabCase"

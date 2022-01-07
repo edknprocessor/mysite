@@ -1,13 +1,13 @@
 import * as React from "react"
-import tw, { styled } from "twin.macro"
+import tw from "twin.macro"
 import Layout from "../components/layout"
 import { graphql } from 'gatsby'
 import Seo from "../components/seo"
 import Card from "../components/card"
 import AllTags from "../components/allTags"
+import Pagination from "../components/pagination"
 
-
-const IndexPage = ({ data }) => {
+const IndexPage = ({ data, location, pageContext }) => {
   return (
     <>
       <Seo title="Home" />
@@ -16,6 +16,10 @@ const IndexPage = ({ data }) => {
           <p css={[tw`text-center text-3xl`]}>作品リスト</p>
           <div css={[tw`mt-8`]}>
             <AllTags />
+            <Pagination
+              pre={pageContext.previousPagePath}
+              next={pageContext.nextPagePath}
+            />
           </div>
           {data.allMarkdownRemark.nodes.map( node => (
             <div css={[tw`mt-8`]} key={node.frontmatter.title}>
@@ -27,6 +31,10 @@ const IndexPage = ({ data }) => {
               />
             </div>
           ))}
+          <Pagination
+            pre={pageContext.previousPagePath}
+            next={pageContext.nextPagePath}
+          />
         </div>
       </Layout>
     </>
@@ -34,7 +42,7 @@ const IndexPage = ({ data }) => {
 }
 
 export const query = graphql`
-  query {
+  query ($skip: Int!, $limit: Int!) {
     site {
       siteMetadata {
         title
@@ -42,6 +50,8 @@ export const query = graphql`
     },
     allMarkdownRemark(
       sort: {order: [DESC, ASC], fields: [frontmatter___date, frontmatter___title]}
+      skip: $skip
+      limit: $limit
     ) {
       nodes {
         frontmatter {

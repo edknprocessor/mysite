@@ -1,12 +1,12 @@
 import React from "react"
 import PropTypes from "prop-types"
-import tw, { styled } from "twin.macro"
+import tw from "twin.macro"
 import Layout from "../components/layout"
 import AllTags from "../components/allTags"
 import Card from "../components/card"
 
 // Components
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
 
 const Tags = ({ pageContext, data }) => {
   const { tag } = pageContext
