@@ -20,7 +20,7 @@ const ContactPage = ({ data }) => (
         {data.site.siteMetadata?.author || `Author`}
       </h1>
       <div css={[tw`mt-4`]}>
-        <p>edknprocessorは、えんがわのポートフォリオサイトです。漫画アシスタント(背景作画、トーン仕上げ等)、イラストのお仕事を募集中です。</p>
+        <p>edknprocessorは、えどがわけんぴ(またはえんがわ)のポートフォリオサイトです。漫画アシスタント(背景作画、トーン仕上げ等)、イラストのお仕事を募集中です。</p>
         <div css={[tw`flex items-center justify-center`]}>
           連絡先:
           <StaticImage
@@ -35,6 +35,11 @@ const ContactPage = ({ data }) => (
     <div css={[tw`mt-8`]}>
       <h2 css={[tw`text-2xl`]}>実績・経歴</h2>
       <dl>
+        <dt>2021年~</dt>
+        <dd>
+          TLコミックのアシスタント(背景描き下ろし・3D配置・人物トーン)<br/>
+          Webコミック(異世界もの)のアシスタント(背景描き下ろし・3D変換線画なじませ・トーン)
+        </dd>
         <dt>2019年~2021年</dt>
         <dd>民間企業にてITエンジニアとして従事</dd>
         <dt>2017年~2019年</dt>
