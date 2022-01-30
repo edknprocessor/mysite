@@ -4,11 +4,13 @@ import tw from "twin.macro"
 import Layout from "../components/layout"
 import AllTags from "../components/allTags"
 import Card from "../components/card"
+import Pagination from "../components/pagination"
 
 // Components
 import { graphql } from "gatsby"
 
 const Tags = ({ pageContext, data }) => {
+  console.log(pageContext)
   const { tag } = pageContext
   const { group, edges, totalCount } = data.allMarkdownRemark
   return (
@@ -16,6 +18,10 @@ const Tags = ({ pageContext, data }) => {
       <p css={[tw`text-center text-3xl`]}>タグ絞り込み: {tag}</p>
       <div css={[tw`mt-8`]}>
         <AllTags />
+        <Pagination
+          pre={pageContext.previousPagePath}
+          next={pageContext.nextPagePath}
+        />
       </div>
       {edges.map( edge => (
         <div css={[tw`mt-8`]} key={edge.node.frontmatter.title}>
@@ -27,6 +33,10 @@ const Tags = ({ pageContext, data }) => {
           />
         </div>
       ))}
+      <Pagination
+        pre={pageContext.previousPagePath}
+        next={pageContext.nextPagePath}
+      />
     </Layout>
   )
 }
@@ -57,11 +67,12 @@ Tags.propTypes = {
 export default Tags
 
 export const pageQuery = graphql`
-  query($tag: String) {
+  query($skip: Int!, $limit: Int!, $tag: String) {
     allMarkdownRemark(
-      limit: 2000
       sort: { fields: [frontmatter___date], order: DESC }
       filter: { frontmatter: { tags: { in: [$tag] } } }
+      skip: $skip
+      limit: $limit
     ) {
       totalCount
       edges {

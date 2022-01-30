@@ -18,8 +18,6 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
 exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions
 
-  const tagTemplate = path.resolve("src/templates/tags.js")
-
   const result = await graphql(`
     {
       allMarkdownRemark(
@@ -38,6 +36,11 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       tagsGroup: allMarkdownRemark(limit: 2000) {
         group(field: frontmatter___tags) {
           fieldValue
+          nodes {
+            fields {
+              slug
+            }
+          }
         }
       }
     }
@@ -63,9 +66,12 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 
   // Make tag pages
   tags.forEach(tag => {
-    createPage({
-      path: `/tags/${_.kebabCase(tag.fieldValue)}/`,
-      component: tagTemplate,
+    paginate({
+      createPage,
+      items: tag.nodes,
+      itemsPerPage: 10,
+      pathPrefix: `/tags/${_.kebabCase(tag.fieldValue)}`,
+      component: path.resolve("src/templates/tags.js"),
       context: {
         tag: tag.fieldValue,
       },

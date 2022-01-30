@@ -50,6 +50,13 @@ module.exports = {
               maxWidth: 700,
             },
           },
+          {
+            resolve: "gatsby-remark-external-links",
+            options: {
+              target: "_self",
+              rel: "noopener noreferrer"
+            }
+          }
         ],
       },
     },
