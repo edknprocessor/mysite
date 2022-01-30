@@ -14,6 +14,11 @@ const IndexPage = ({ data, location, pageContext }) => {
       <Layout>
         <div>
           <p css={[tw`text-center text-3xl`]}>作品リスト</p>
+          <div css={[tw`mt-8 text-xl`]}>
+            <a href="https://twitter.com/i/events/1485925476535136257">
+              背景ラフ集はこちら
+            </a>
+          </div>
           <div css={[tw`mt-8`]}>
             <AllTags />
             <Pagination
