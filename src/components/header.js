@@ -35,7 +35,7 @@ const Header = ({ siteTitle }) => (
         <MenuItem url="/" title="home" />
         <MenuItem url="/contact" title="contact" />
         <a href="https://twitter.com/i/events/1485925476535136257" target="_blank" rel="noopener noreferrer">
-          背景ラフ集はこちら
+          背景落書き集はこちら
         </a>
       </div>
     </div>
