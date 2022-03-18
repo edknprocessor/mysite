@@ -19,14 +19,22 @@ a[target="_blank"]::after {
 .p-post h3 {
   @apply my-2 font-bold text-xl;
 }
-.p-post ul {
+.p-post ul, .p-post ol {
   @apply my-4;
 }
-.p-post ul > li {
+.p-post ul > li, .p-post ol > li {
   @apply mt-2;
 }
 .p-post ul > li::before {
   content: "-";
+  @apply inline-block text-gray-400 mr-4;
+}
+.p-post ol {
+  counter-reset: item;
+}
+.p-post ol > li::before {
+  counter-increment: item;
+  content: counter(item)'.';
   @apply inline-block text-gray-400 mr-4;
 }
 
