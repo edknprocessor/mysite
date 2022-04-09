@@ -38,6 +38,10 @@ a[target="_blank"]::after {
   @apply inline-block text-gray-400 mr-4;
 }
 
+.p-table th, .p-table td {
+  @apply px-4 py-2;
+}
+
 dt {
   @apply mt-2;
 }

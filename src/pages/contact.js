@@ -1,5 +1,5 @@
 import * as React from "react"
-import { graphql } from "gatsby"
+import { Link, graphql } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 import tw from "twin.macro"
 import Layout from "../components/layout"
@@ -21,15 +21,16 @@ const ContactPage = ({ data }) => (
       </h1>
       <div css={[tw`mt-4`]}>
         <p>edknprocessorは、えどがわけんぴ(またはえんがわ)のポートフォリオサイトです。漫画アシスタント(背景作画、トーン仕上げ等)、イラストのお仕事を募集中です。</p>
-        <div css={[tw`flex items-center justify-center`]}>
-          連絡先:
-          <StaticImage
-            src="../images/mail.png"
-            width={250}
-            quality={100}
-            alt="e-mailaddress"
-          />
-        </div>
+        <p css={[tw`mt-4 text-2xl text-center`]}>現在、2022年5月以降着手の案件を受け付けております。</p>
+        <table css={[tw`mt-4 table-auto`]} className="p-table">
+          <tr><th>作業可能時間</th><td>10:00~22:00間のうち実働7~9h</td></tr>
+          <tr><th>スキル</th><td>パース定規を使った3点透視背景の描き下ろし、3Dオブジェクトの配置、LT変換</td></tr>
+          <tr><th>ソフトウェア</th><td>CLIP STUDIO PAINT EX</td></tr>
+          <tr><th>希望報酬</th><td>日給¥10,000~、出来高制の場合時給¥1,200から</td></tr>
+          <tr><th>データ共有</th><td>Dropbox, CLIP STUDIOチーム制作機能, GoogleDrive</td></tr>
+          <tr><th>連絡手段</th><td>skype, Discord</td></tr>
+          <tr><th>お問い合わせ</th><td>edknprocessor★gmail.com</td></tr>
+        </table>
       </div>
     </div>
     <div css={[tw`mt-8`]}>
@@ -38,7 +39,8 @@ const ContactPage = ({ data }) => (
         <dt>2022年~</dt>
         <dd>
         	男性向けR18漫画の臨時アシスタント(背景・トーン)<br/>
-        	志藤ミネ先生臨時アシスタント(自然物背景)
+        	志藤ミネ先生臨時アシスタント(自然物背景)<br/>
+          Webコミックのレギュラーアシスタント(背景・トーン)
         </dd>
         <dt>2021年~</dt>
         <dd>
@@ -69,6 +71,9 @@ const ContactPage = ({ data }) => (
         <dt>2013年</dt>
         <dd>漫画同人誌『神様のカルト』(もりや神社例大祭三)発行</dd>
       </dl>
+    </div>
+    <div css={[tw`mt-8`]}>
+      <p>このWebサイトは<Link to="https://www.gatsbyjs.com/" target="_blank">Gatsby.js</Link>を用いて自作しています。</p>
     </div>
   </Layout>
 )
