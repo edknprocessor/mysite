@@ -1,7 +1,7 @@
 ---
 title: "車のイラスト"
 featuredImage: "../images/car.png"
-tags: ["小物", "カラー"]
+tags: ["小物", "カラー", "モノクロ"]
 date: "2022-02-20"
 ---
 
@@ -14,3 +14,8 @@ date: "2022-02-20"
 
 ## 参考
 [スバル公式サイト](https://www.subaru.jp/levorg/levorg/)
+
+## 2022年5月4日追記
+![トヨタマークⅡ](../images/toyo.png)
+
+別メーカーの車も描いてみました。3時間程度です。
