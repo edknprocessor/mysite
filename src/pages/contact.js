@@ -21,15 +21,24 @@ const ContactPage = ({ data }) => (
       </h1>
       <div css={[tw`mt-4`]}>
         <p>edknprocessorは、えどがわけんぴ(またはえんがわ)のポートフォリオサイトです。漫画アシスタント(背景作画、トーン仕上げ等)、イラストのお仕事を募集中です。(レギュラーアシスタント3件と掛け持ちになります。)</p>
-        <p css={[tw`mt-4 text-2xl text-center`]}>現在、2022年5月7日~17日のアシスタント業務を募集しています。</p>
+        <p css={[tw`mt-4 text-2xl text-center`]}>現在、2022年5月16日,17日のアシスタント業務を募集しています。</p>
         <table css={[tw`mt-4 table-auto`]} className="p-table">
           <tr><th>作業可能時間</th><td>10:00~22:00間のうち実働7~9h</td></tr>
-          <tr><th>スキル</th><td>パース定規を使った3点透視背景の描き下ろし、3Dオブジェクトの配置、LT変換</td></tr>
+          <tr><th>スキル</th><td>パース定規を使った3点透視背景の描き起こし、<br/>3Dオブジェクトの配置、LT変換</td></tr>
           <tr><th>ソフトウェア</th><td>CLIP STUDIO PAINT EX</td></tr>
           <tr><th>希望報酬</th><td>日給¥10,000~、出来高制の場合時給¥1,200から</td></tr>
           <tr><th>データ共有</th><td>Dropbox, CLIP STUDIOチーム制作機能, GoogleDrive</td></tr>
           <tr><th>連絡手段</th><td>skype, Discord</td></tr>
-          <tr><th>お問い合わせ</th><td>edknprocessor★gmail.com</td></tr>
+          <tr>
+            <th rowspan="3">お問い合わせ</th>
+            <th>e-mail</th><td>edknprocessor★gmail.com</td>
+          </tr>
+          <tr>
+            <th>Discord</th><td>えどけん#4200</td>
+          </tr>
+          <tr>
+            <th>skype</th><td>hassyes</td>
+          </tr>
         </table>
       </div>
     </div>
@@ -77,7 +86,7 @@ const ContactPage = ({ data }) => (
       </dl>
     </div>
     <div css={[tw`mt-8`]}>
-      <p>このWebサイトは<Link to="https://www.gatsbyjs.com/" target="_blank">Gatsby.js</Link>を用いて自作しています。</p>
+      <p>このWebサイトは<Link to="https://www.gatsbyjs.com/" target="_blank">Gatsby.js</Link>で作成しています。</p>
     </div>
   </Layout>
 )
