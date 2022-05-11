@@ -10,7 +10,6 @@ import Pagination from "../components/pagination"
 import { graphql } from "gatsby"
 
 const Tags = ({ pageContext, data }) => {
-  console.log(pageContext)
   const { tag } = pageContext
   const { group, edges, totalCount } = data.allMarkdownRemark
   return (
