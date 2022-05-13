@@ -5,6 +5,9 @@ import { graphql } from 'gatsby'
 import Seo from "../components/seo"
 import Card from "../components/card"
 import AllTags from "../components/allTags"
+import Post from "../components/post"
+import Img from "gatsby-image"
+import TagList from "../components/tagList"
 import Pagination from "../components/pagination"
 
 const IndexPage = ({ data, location, pageContext }) => {
@@ -24,11 +27,19 @@ const IndexPage = ({ data, location, pageContext }) => {
           {data.allMarkdownRemark.nodes.map( node => (
             <div css={[tw`mt-8`]} key={node.frontmatter.title}>
               <Card title={node.frontmatter.title}
-                date={node.frontmatter.date}
-                img={node.frontmatter.featuredImage.childImageSharp.fluid}
-                html={node.html}
-                tags={node.frontmatter.tags}
-              />
+                date={node.frontmatter.date}>
+                <TagList tags={node.frontmatter.tags.map(tag => {
+                  return {fieldValue: tag}
+                })} />
+                <Img
+                  alt={node.frontmatter.title}
+                  fluid={node.frontmatter.featuredImage.childImageSharp.fluid}
+                  css={[tw`my-8`]}
+                />
+                <Post
+                  html={node.html}
+                />
+              </Card>
             </div>
           ))}
           <Pagination

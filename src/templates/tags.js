@@ -4,6 +4,9 @@ import tw from "twin.macro"
 import Layout from "../components/layout"
 import AllTags from "../components/allTags"
 import Card from "../components/card"
+import Post from "../components/post"
+import Img from "gatsby-image"
+import TagList from "../components/tagList"
 import Pagination from "../components/pagination"
 
 // Components
@@ -25,11 +28,19 @@ const Tags = ({ pageContext, data }) => {
       {edges.map( edge => (
         <div css={[tw`mt-8`]} key={edge.node.frontmatter.title}>
           <Card title={edge.node.frontmatter.title}
-            date={edge.node.frontmatter.date}
-            img={edge.node.frontmatter.featuredImage.childImageSharp.fluid}
-            html={edge.node.html}
-            tags={edge.node.frontmatter.tags}
-          />
+            date={edge.node.frontmatter.date}>
+            <TagList tags={edge.node.frontmatter.tags.map(tag => {
+              return {fieldValue: tag}
+            })} />
+            <Img
+              alt={edge.node.frontmatter.title}
+              fluid={edge.node.frontmatter.featuredImage.childImageSharp.fluid}
+              css={[tw`my-8`]}
+            />
+            <Post
+              html={edge.node.html}
+            />
+          </Card>
         </div>
       ))}
       <Pagination
