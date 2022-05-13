@@ -53,6 +53,7 @@ export const query = graphql`
       }
     },
     allMarkdownRemark(
+      filter: {fields: {collection: {eq :"posts"}}}
       sort: {order: [DESC, ASC], fields: [frontmatter___date, frontmatter___title]}
       skip: $skip
       limit: $limit

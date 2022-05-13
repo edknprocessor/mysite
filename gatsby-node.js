@@ -6,11 +6,17 @@ const _ = require("lodash")
 exports.onCreateNode = ({ node, getNode, actions }) => {
   const { createNodeField } = actions
   if (node.internal.type === `MarkdownRemark`) {
-    const slug = createFilePath({ node, getNode, basePath: `posts` })
+    const slug = createFilePath({ node, getNode})
+    const parent = getNode(node.parent)
     createNodeField({
       node,
       name: `slug`,
       value: slug,
+    })
+    createNodeField({
+      node,
+      name: 'collection',
+      value: parent.sourceInstanceName,
     })
   }
 }
