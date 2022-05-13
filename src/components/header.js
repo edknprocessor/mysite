@@ -33,6 +33,7 @@ const Header = ({ siteTitle }) => (
         ]}
       >
         <MenuItem url="/" title="home" />
+        <MenuItem url="/news" title="news" />
         <MenuItem url="/contact" title="contact" />
       </div>
     </div>

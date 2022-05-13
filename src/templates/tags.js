@@ -69,7 +69,7 @@ export const pageQuery = graphql`
   query($skip: Int!, $limit: Int!, $tag: String) {
     allMarkdownRemark(
       sort: { fields: [frontmatter___date], order: DESC }
-      filter: { frontmatter: { tags: { in: [$tag] } } }
+      filter: { frontmatter: { tags: { in: [$tag] } }, fields: {collection: {eq: "posts"} }}
       skip: $skip
       limit: $limit
     ) {
