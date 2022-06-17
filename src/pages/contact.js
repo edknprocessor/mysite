@@ -21,8 +21,6 @@ const ContactPage = ({ data }) => (
       </h1>
       <div css={[tw`mt-4`]}>
         <p>edknprocessorは、えどがわけんぴ(またはえんがわ)のポートフォリオサイトです。漫画アシスタント(背景作画、トーン仕上げ等)、イラストのお仕事を募集中です。</p>
-        <p css={[tw`mt-4 text-2xl text-center`]}>現在、2022年6月20~24日間のうち最大4日入れるアシスタント業務を募集しています。</p>
-        <p>上記期間外でも常時お問い合わせ受け付けております。</p>
         <table css={[tw`mt-4 table-auto`]} className="p-table">
           <tr><th>作業可能時間</th><td>10:00~22:00間のうち実働7~9h</td></tr>
           <tr><th>スキル</th><td>パース定規を使った3点透視背景の描き起こし、<br/>3Dオブジェクトの配置、LT変換</td></tr>
