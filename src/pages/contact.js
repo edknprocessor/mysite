@@ -22,24 +22,6 @@ const ContactPage = ({ data }) => (
       <div css={[tw`mt-4`]}>
         <p>edknprocessorは、えどがわけんぴ(またはえんがわ)のポートフォリオサイトです。漫画アシスタント(背景作画、トーン仕上げ等)、イラストのお仕事を募集中です。</p>
 	<p>新規募集時は<a href="https://ganmo.j-comi.co.jp/posts" target="_blank">GANMO様</a>にて告知しています。過去1回以上お手伝いさせていただいた作家様は募集記事の有無にかかわらずいつでもお気軽にご相談ください。</p>
-        <table css={[tw`mt-4 table-auto`]} className="p-table">
-          <tr><th>作業可能時間</th><td>10:00~22:00間のうち実働7~9h</td></tr>
-          <tr><th>スキル</th><td>パース定規を使った3点透視背景の描き起こし、<br/>3Dオブジェクトの配置、LT変換</td></tr>
-          <tr><th>ソフトウェア</th><td>CLIP STUDIO PAINT EX</td></tr>
-          <tr><th>希望報酬</th><td>日給¥10,000~、出来高制の場合時給¥1,250から</td></tr>
-          <tr><th>データ共有</th><td>Dropbox, CLIP STUDIOチーム制作機能, GoogleDrive</td></tr>
-          <tr><th>連絡手段</th><td>skype, Discord</td></tr>
-          <tr>
-            <th rowspan="3">お問い合わせ</th>
-            <th>e-mail</th><td>edknprocessor★gmail.com</td>
-          </tr>
-          <tr>
-            <th>Discord</th><td>えどけん#4200</td>
-          </tr>
-          <tr>
-            <th>skype</th><td>hassyes</td>
-          </tr>
-        </table>
       </div>
     </div>
     <div css={[tw`mt-8`]}>
