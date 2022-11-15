@@ -6,7 +6,7 @@ import { Link } from "gatsby"
 const MenuItem = (props) => (
   <div css={[ tw`mx-2` ]}>
     <Link to={props.url} css={[
-      tw`px-4 py-2 text-red-600 border-b hover:border-black`
+      tw`px-4 py-2 text-indigo-600 border-b hover:border-black`
     ]}>{props.title}</Link>
   </div>
 )

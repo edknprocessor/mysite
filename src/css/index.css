@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 a {
-  @apply text-red-600 hover:text-gray-500;
+  @apply text-indigo-600 hover:text-gray-500;
 }
 
 a[target="_blank"] {

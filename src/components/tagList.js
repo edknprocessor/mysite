@@ -10,7 +10,7 @@ const TagList = (props) => {
       {props.tags.map(tag => (
         <li key={tag.fieldValue}>
           <Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>
-            <div css={[tw`text-sm px-2 py-1 mr-2 bg-red-400 text-white`]}>
+            <div css={[tw`text-sm px-2 py-1 mr-2 bg-indigo-400 text-white`]}>
               {tag.fieldValue}
             </div>
           </Link>
