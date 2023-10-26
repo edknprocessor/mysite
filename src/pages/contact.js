@@ -22,7 +22,7 @@ const ContactPage = ({ data }) => (
       <div css={[tw`mt-4`]}>
         <p>edknprocessorは、えどがわけんぴ(またはえんがわ)のポートフォリオサイトです。</p>
 	      <p>新規募集時は<a href="https://ganmo.j-comi.co.jp/posts" target="_blank">GANMO様</a>にて告知しています。</p>
-        <p>メールアドレス： edknprocessor☆gmail.com<br>
+        <p>メールアドレス： edknprocessor☆gmail.com<br />
           X(旧Twitter): <a href="https://twitter.com/kurokashuka" target="_blank">@kurokashuka</a>
         </p>
       </div>
